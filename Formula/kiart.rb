@@ -5,20 +5,20 @@
 class Kiart < Formula
   desc "A blazing fast CLI tool to convert images to high-res ASCII art."
   homepage "https://github.com/nendix/kiart"
-  version "0.1.0"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nendix/kiart/releases/download/v0.1.0/kiart_Darwin_x86_64.tar.gz"
-      sha256 "9281e709cb3e9683c151b0fd0607b53ff574f9c037507f946348a692fbeb55ec"
+      url "https://github.com/nendix/kiart/releases/download/v0.1.2/kiart_Darwin_x86_64.tar.gz"
+      sha256 "a9e18edf59eaeb646d81339a4fe1b3c48847c32edcfc62f054f83a0e94f9ac8a"
 
       define_method(:install) do
         bin.install "kiart"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nendix/kiart/releases/download/v0.1.0/kiart_Darwin_arm64.tar.gz"
-      sha256 "4b1a8c7b13789e0410c0694545ba892e63b934aab2995eb46fc7e64f1e991366"
+      url "https://github.com/nendix/kiart/releases/download/v0.1.2/kiart_Darwin_arm64.tar.gz"
+      sha256 "1b90e19c43408b40e1e29668709146553f862bcbac6942b6bbdb9b7a96095556"
 
       define_method(:install) do
         bin.install "kiart"
@@ -28,15 +28,15 @@ class Kiart < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nendix/kiart/releases/download/v0.1.0/kiart_Linux_x86_64.tar.gz"
-      sha256 "eee3fef4c5da924dccfa429115523e4f459767937993c5f5f0e09ee1d6a0a68b"
+      url "https://github.com/nendix/kiart/releases/download/v0.1.2/kiart_Linux_x86_64.tar.gz"
+      sha256 "5fa5df691dbb040da385e7a883a12bae6022383d4568b224e8e3beac916463d2"
       define_method(:install) do
         bin.install "kiart"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nendix/kiart/releases/download/v0.1.0/kiart_Linux_arm64.tar.gz"
-      sha256 "28029410e60e0b72402e763d15d155e25a66133eb18e20fa24380563e3f38c2a"
+      url "https://github.com/nendix/kiart/releases/download/v0.1.2/kiart_Linux_arm64.tar.gz"
+      sha256 "f0ca7d40239542549f427081971ff94b124d2f75e158d8d6235be3b4a34814b1"
       define_method(:install) do
         bin.install "kiart"
       end
